@@ -17,7 +17,7 @@ Code for the project 'Predicting emotion in music: Harnessing multimodal artific
 - Ensemble Models.ipynb (this notebook was > 25 MB, so could not upload to GitHub)
 
 ### Important!
-The code in the notebooks mentioned above was repeated for the dominance, valence and arousal labels. Instead of uploading the same files three times, I have only uploaded the notebooks for the dominance label.
+The code in the notebooks mentioned above was repeated for the dominance, valence and arousal labels. Instead of uploading the same files three times, I have only uploaded the notebooks regarding predictions of the dominance label.
 
 
 
