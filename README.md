@@ -11,8 +11,12 @@ Code for the project 'Predicting emotion in music: Harnessing multimodal artific
 - Language Feature Extraction and Selection.ipnyb (extracting language features from the lyrics + performing feature selection on said features)
 - Language Data Grid Search - Traditional and NN (3).ipynb (grid search for both traditional and neural network model types, this notebook also contains grid search for the traditional model based on BERT embeddings
 - RoBERTa Fine Tuning (3).ipynb (finetuning the RoBERTa language model to predict sentiment labels from our data)
+  
 ### Ensemble/multimodal models
+- One Multimodal Model.ipynb (grid search for traditional model types based on acoustic AND language features)
+- Ensemble Models.ipynb (this notebook was > 25 MB, so could not upload to GitHub)
 
+### Important!
 The code in the notebooks mentioned above was repeated for the dominance, valence and arousal labels. Instead of uploading the same files three times, I have only uploaded the notebooks for the dominance label.
 
 
