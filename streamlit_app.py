@@ -105,18 +105,41 @@ lyrics = st.text_input("Please copy-paste the lyrics to your favourite song!")
 percentage =  64
 new_predictions = 4.5
 
-if new_predictions < 4:
-    st.write("This song has a low arousal rating of",str(percentage), "%.")
-    st.write("This rating suggests that it is calm and relaxing.")
-    colour = 'lightblue'
-elif new_predictions >= 4 and new_predictions <=5:
-    st.write("This song has a moderate arousal rating of", str(percentage), "%.")
-    st.write("This rating suggests that it is upbeat and rhythimical.")
-    colour = 'lightgreen'
-else:
-    st.write("This song has a high arousal rating of", str(percentage), "%.")
-    st.write("This rating suggests that it is exciting and energetic.")
-    colour = 'orange'
+import matplotlib.pyplot as plt
+
+
+arousal_rating = percentage
+
+
+fig, ax = plt.subplots(figsize=(10, 2))
+
+
+sections = ['Low', 'Moderate', 'High']
+colors = ['lightblue', 'lightgreen', 'orange']
+positions = [0, 33.33, 66.66, 100]  #
+
+
+for i in range(len(sections)):
+    ax.barh(0, positions[i + 1] - positions[i], left=positions[i], color=colors[i], edgecolor='white', height=1.0)
+
+#Needle
+needle_position = arousal_rating
+ax.plot([needle_position, needle_position], [-0.5, 0.5], color='black', linewidth=2)
+ax.text(needle_position, 0.65, f'{arousal_rating}%', horizontalalignment='center', verticalalignment='center', color='black', fontsize=12)
+
+#Labels
+label_positions = [(positions[i] + positions[i + 1]) / 2 for i in range(len(sections))]
+ax.set_yticks([])
+ax.set_xlim(0, 100)
+ax.set_xticks(label_positions)
+ax.set_xticklabels(sections)
+
+
+for spine in ax.spines.values():
+    spine.set_visible(False)
+
+plt.title('Arousal Rating',y=-0.4)
+plt.show()
     
 
 
