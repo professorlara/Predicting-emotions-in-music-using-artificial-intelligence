@@ -1,5 +1,5 @@
 import streamlit as st
-st.write("Hello World")
+
 
 #import nltk
 #nltk.download('averaged_perceptron_tagger')
@@ -98,8 +98,9 @@ def wordclass(text, category):
     return counts[category]
 
 
-
+st.write("Music Emotion Predictor")
 # Input lyrics
+lyrics = st.text_area("Message",height =200)
 lyrics = st.text_input("Please copy-paste the lyrics to your favourite song!")
 
 
