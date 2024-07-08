@@ -3,6 +3,7 @@ streamlit.write("Hello World")
 
 import nltk
 nltk.download('averaged_perceptron_tagger')
+import nltkmodules
 from textblob import TextBlob
 from sklearn.feature_extraction.text import CountVectorizer
 import pandas as pd
