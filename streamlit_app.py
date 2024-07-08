@@ -6,7 +6,7 @@ nltk.download('averaged_perceptron_tagger')
 from textblob import TextBlob
 from sklearn.feature_extraction.text import CountVectorizer
 import pandas as pd
-import numpy as 
+import numpy as np
 
 # Define the functions
 def wordcount(text):
