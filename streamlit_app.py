@@ -8,6 +8,7 @@ import streamlit as st
 #from sklearn.feature_extraction.text import CountVectorizer
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Define the functions
 def wordcount(text):
@@ -102,6 +103,39 @@ st.write("Music Emotion Predictor")
 # Input lyrics
 lyrics = st.text_input("Please copy-paste the lyrics to your favourite song!")
 
+
+
+
+arousal_rating = 64
+fig, ax = plt.subplots(figsize=(10, 2))
+
+
+sections = ['Low', 'Moderate', 'High']
+colors = ['lightblue', 'lightgreen', 'orange']
+positions = [0, 33.33, 66.66, 100]  #
+
+
+for i in range(len(sections)):
+    ax.barh(0, positions[i + 1] - positions[i], left=positions[i], color=colors[i], edgecolor='white', height=1.0)
+
+#Needle
+needle_position = arousal_rating
+ax.plot([needle_position, needle_position], [-0.5, 0.5], color='black', linewidth=2)
+ax.text(needle_position, 0.65, f'{arousal_rating}%', horizontalalignment='center', verticalalignment='center', color='black', fontsize=12)
+
+#Labels
+label_positions = [(positions[i] + positions[i + 1]) / 2 for i in range(len(sections))]
+ax.set_yticks([])
+ax.set_xlim(0, 100)
+ax.set_xticks(label_positions)
+ax.set_xticklabels(sections)
+
+
+for spine in ax.spines.values():
+    spine.set_visible(False)
+
+plt.title('Arousal Rating',y=-0.4)
+plt.show()
 
     
 
