@@ -95,7 +95,7 @@ def wordclass(text, category):
     counts['past_participle_verb_freq'] = past_participle_verb_freq
     counts['coordinating_conjunctions_freq'] = coordinating_conjunctions_freq
     
-    return counts[category
+    return counts[category]
 
 
 
