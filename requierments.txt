@@ -2,6 +2,6 @@ numpy==1.23.5
 textblob==0.18.0
 pandas==2.0.3
 pygal==3.0.4
-nltk
+#nltk
 sklearn=0.15.2
 matplotlib==3.6.2
