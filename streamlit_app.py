@@ -1,4 +1,4 @@
-import streamlit as st
-st.write("Hello World")
+import streamlit
+streamlit.write("Hello World")
 
-st run streamlit_app.py
+streamlit run streamlit_app.py
