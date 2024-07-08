@@ -100,9 +100,24 @@ def wordclass(text, category):
 
 st.write("Music Emotion Predictor")
 # Input lyrics
-lyrics = st.text_area("lyrics",height =200)
 lyrics = st.text_input("Please copy-paste the lyrics to your favourite song!")
 
+percentage =  64
+new_predictions = 4.5
+
+if new_predictions < 4:
+    st.write("This song has a low arousal rating of",str(percentage), "%.")
+    st.write("This rating suggests that it is calm and relaxing.")
+    colour = 'lightblue'
+elif new_predictions >= 4 and new_predictions <=5:
+    st.write("This song has a moderate arousal rating of", str(percentage), "%.")
+    st.write("This rating suggests that it is upbeat and rhythimical.")
+    colour = 'lightgreen'
+else:
+    st.write("This song has a high arousal rating of", str(percentage), "%.")
+    st.write("This rating suggests that it is exciting and energetic.")
+    colour = 'orange'
+    
 
 
 
