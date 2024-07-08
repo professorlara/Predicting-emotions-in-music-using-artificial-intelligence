@@ -1,5 +1,5 @@
-import streamlit
-streamlit.write("Hello World")
+import streamlit as st
+st.write("Hello World")
 
 #import nltk
 #nltk.download('averaged_perceptron_tagger')
@@ -95,4 +95,13 @@ def wordclass(text, category):
     counts['past_participle_verb_freq'] = past_participle_verb_freq
     counts['coordinating_conjunctions_freq'] = coordinating_conjunctions_freq
     
-    return counts[category]
+    return counts[category
+
+
+
+# Input lyrics
+lyrics = st.text_input("Please copy-paste the lyrics to your favourite song!")
+
+
+
+
